@@ -1,0 +1,20 @@
+<div class="mt-4 mb-4 d-flex justify-content-between align-item-center">
+    <button type="button" routerLink="/address-form" class="btn btn-primary"> Ajouter une addresse</button> 
+</div>
+
+<div class="d-flex flex-column gap-3">
+    <div *ngFor="let address of addresses; let i = index" class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{address.country}}</h5>
+            <p class="card-text">{{address.city}}</p>
+            <p class="card-text">{{address.street}}</p>
+            <p class="card-text">{{address.postalCode}}</p>
+            
+            <div class="d-flex gap-2">
+                <button *ngIf="authService.getUserDetails()?.role === 'ROLE_ADMIN' || authService.getUserDetails()?.id === address.user_id" type="button" class="btn btn-primary" (click)="editAddress(address.id!)">Modifier</button>
+                <button *ngIf="authService.getUserDetails()?.role === 'ROLE_ADMIN' || authService.getUserDetails()?.id === address.user_id" type="button" class="btn btn-danger" (click)="deleteAddress(address.id!)">Supprimer</button>
+            </div>
+    
+        </div>
+    </div>
+</div>

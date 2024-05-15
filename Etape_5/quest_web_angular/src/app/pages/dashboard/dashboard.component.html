@@ -1,0 +1,10 @@
+<div *ngFor="let user of users">
+    <h3>
+      <a
+        [title]="user.username"
+        [routerLink]="['/user', user.id]"
+      >
+      </a>
+    </h3>
+
+</div>

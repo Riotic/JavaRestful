@@ -1,0 +1,41 @@
+.nagivation-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  width: 99%;
+  height: 5rem;
+  align-items: center;
+  margin: 0;
+  padding: 0.48rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+    font-style: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+  }
+  
+
+
+.links-logout {
+
+  margin-right: 2rem;
+}
+.links {
+  margin: 1rem;
+  margin-right: 1.5rem;
+}
+
+.first-links {
+    display: flex;
+    flex-direction: row;
+}
+

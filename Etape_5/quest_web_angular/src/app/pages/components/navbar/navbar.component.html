@@ -1,0 +1,16 @@
+<nav >
+  <ul class="nagivation-bar">
+      <div class="first-links">
+    <li class="links"><a routerLink="/dashboard" routerLinkActive="active">The Application</a></li>
+    <li class="links"><a routerLink="/user" routerLinkActive="active">User</a></li>
+    <li class="links"><a routerLink="/address" routerLinkActive="active">Address</a></li>
+    <li class="links"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+  </div>
+
+  <div class="last-links">
+    <li class="links-logout"><a routerLink="/login" routerLinkActive="active" (click)="onLogout()">log out</a></li>
+  </div>
+  </ul>
+
+  <router-outlet></router-outlet>
+</nav>

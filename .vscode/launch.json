@@ -1,24 +1,34 @@
 {
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Spring Boot-QuestWebApplication<quest_web>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.quest.etna.QuestWebApplication",
-            "projectName": "quest_web",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-QuestWebJavaApplication<quest_web>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.quest.etna.QuestWebJavaApplication",
-            "projectName": "quest_web",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        }
-    ]
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-QuestWebApplication<quest_web>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.quest.etna.QuestWebApplication",
+      "projectName": "quest_web",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-QuestWebJavaApplication<quest_web>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.quest.etna.QuestWebJavaApplication",
+      "projectName": "quest_web",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-QuestWebJavaApplication<com.quest-quest_web>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.quest.etna.QuestWebJavaApplication",
+      "projectName": "com.quest-quest_web",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
 }

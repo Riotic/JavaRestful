@@ -1,0 +1,19 @@
+<!-- <div class="mt-4 mb-4 d-flex justify-content-between align-item-center">
+    <button *ngIf="authService.getUserDetails()?.role === 'ROLE_ADMIN'" type="button" routerLink="/user-form" class="btn btn-primary"> Ajouter un utilisateur</button> 
+</div> -->
+
+<div class="d-flex flex-column gap-3">
+    <div *ngFor="let user of users; let i = index" class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{user.username}}</h5>
+            <p *ngIf="authService.getUserDetails()?.role === 'ROLE_ADMIN'" class="card-text">{{user.role}}</p>
+            
+            <div class="d-flex gap-2">
+                <button *ngIf="authService.getUserDetails()?.role === 'ROLE_ADMIN' || authService.getUserDetails()?.id === user.id" type="button" class="btn btn-primary" (click)="editUser(user.id)">Modifier</button>
+                <button *ngIf="authService.getUserDetails()?.role === 'ROLE_ADMIN' || authService.getUserDetails()?.id === user.id" type="button" class="btn btn-danger" (click)="deleteUser(user.id)">Supprimer</button>
+                <button type="button" class="btn btn-info" [routerLink]="['/address/user', user.id]">Voir les adresses</button>
+            </div>
+    
+        </div>
+    </div>
+</div>

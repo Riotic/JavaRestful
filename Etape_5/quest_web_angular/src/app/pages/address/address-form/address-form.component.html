@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-lg-6">
+        <h4>Formulaire d'addresse</h4>
+        <form [formGroup]="addresseForm" (submit)="onSubmit()">
+            <div class="mb-3">
+                <label for="street" class="form-label">Rue</label>
+                <input type="text" class="form-control" id="street" name="street" formControlName="street">
+                @if (addresseForm.get('street')?.hasError('required') && addresseForm.get('street')?.touched){
+                    <div class="form-text text-danger fw-bold">Veuillez indiquer la rue de l'addresse.</div>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="street" class="form-label">Code postal</label>
+                <input type="number" class="form-control" id="postalCode" name="postalCode" formControlName="postalCode">
+                @if (addresseForm.get('postalCode')?.hasError('required') && addresseForm.get('postalCode')?.touched){
+                    <div class="form-text text-danger fw-bold">Veuillez indiquer le code postal.</div>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="street" class="form-label">Ville</label>
+                <input type="text" class="form-control" id="city" name="city" formControlName="city">
+                @if (addresseForm.get('city')?.hasError('required') && addresseForm.get('city')?.touched){
+                    <div class="form-text text-danger fw-bold">Veuillez indiquer la ville.</div>
+                }
+            </div>
+            <div class="mb-3" class="form-label">
+                <label for="street">Pays</label>
+                <input type="text" class="form-control" id="country" name="country" formControlName="country">
+                @if (addresseForm.get('country')?.hasError('required') && addresseForm.get('country')?.touched){
+                    <div class="form-text text-danger fw-bold">Veuillez indiquer le pays.</div>
+                }
+            </div>
+
+            <button type="submit" class="btn btn-primary">{{ id ? 'Modifier l\'adresse' : 'Créer l\'adresse' }}</button>
+
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="parent">
+    <div class="container">
+        <div class="login-box">
+            <h2>Register</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="email" [(ngModel)]="registerObj.username" name="username" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" [(ngModel)]="registerObj.password" name="password" required>
+                    <label>Password</label>
+                </div>
+                
+                <button type="button" class="btn" (click)="onRegister()" >Confirm</button>
+                 
+            </form>
+            <p>Already have an account? <a routerLink="/login">Login here</a></p>
+        </div>
+        
+    </div>
+</div>  

@@ -7,13 +7,10 @@ import com.quest.etna.model.User;
 import com.quest.etna.model.UserDetail;
 import com.quest.etna.repositories.UserRepository;
 
-import io.jsonwebtoken.JwtException;
-import io.jsonwebtoken.MalformedJwtException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -29,7 +26,7 @@ import java.util.List;
 
 @RestController
 public class AuthenticationController {
-    static private UserRepository userRepository;
+    private UserRepository userRepository;
     
     @Autowired
     private PasswordEncoder passwordEncoder;

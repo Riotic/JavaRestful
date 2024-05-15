@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-lg-6">
+        <h4>Formulaire d'utilisateur</h4>
+        <form [formGroup]="userForm" (submit)="onSubmit()">
+            <div class="mb-3">
+                <label for="username" class="form-label">Nom d'utilisateur</label>
+                <input type="text" class="form-control" id="username" name="username" formControlName="username">
+                <div *ngIf="userForm.get('username')?.hasError('required') && userForm.get('username')?.touched">
+                    <div class="form-text text-danger fw-bold">Veuillez indiquer le nom d'utilisateur.</div>
+                </div>
+            </div>
+            <div class="mb-3" *ngIf="!userId">
+                <label for="password" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password" name="password" formControlName="password">
+                <div *ngIf="userForm.get('password')?.hasError('required') && userForm.get('password')?.touched">
+                    <div class="form-text text-danger fw-bold">Veuillez indiquer le mot de passe.</div>
+                </div>
+            </div>
+            <div class="mb-3" *ngIf="authService.getUserDetails().role === 'ROLE_ADMIN'">
+                <label for="role" class="form-label">Rôle</label>
+                <select class="form-control" id="role" name="role" formControlName="role">
+                    <option value="ROLE_USER">ROLE_USER</option>
+                    <option value="ROLE_ADMIN">ROLE_ADMIN</option>
+                </select>
+                <div *ngIf="userForm.get('role')?.hasError('required') && userForm.get('role')?.touched">
+                    <div class="form-text text-danger fw-bold">Veuillez indiquer le rôle.</div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">{{ userId ? 'Modifier l\'utilisateur' : 'Créer l\'utilisateur' }}</button>
+
+        </form>
+    </div>
+</div>
