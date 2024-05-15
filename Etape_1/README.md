@@ -12,7 +12,7 @@ Avant de commencer, il faut avoir installé les éléments suivants :
 
 1. Ouvre Spring Tool Suite.
 2. Crée un nouveau projet Maven en utilisant Spring Starter Project via https://start.spring.io/.  
-![alt text](../imageReadme/Etape_1/image.png)
+![screenshot](../imageReadme/Etape_1/image.png)
 3. Remplisse les paramètres comme suit :
    - Name: quest_web_java
    - Group: com.quest
@@ -31,10 +31,10 @@ Avant de commencer, il faut avoir installé les éléments suivants :
 ### Changement de Port
 
 Modification du port de l'application de 8080 à 8090 en modifiant les propriétés dans le fichier `application.properties`.
-![alt text](../imageReadme/Etape_1/image3.png)  
+![screenshot](../imageReadme/Etape_1/image3.png)  
 
 et lors de l'initialisation du springboot : 
-![alt text](../imageReadme/Etape_1/image2.png)  
+![screenshot](../imageReadme/Etape_1/image2.png)  
 
 ### Ajout d'un Contrôleur
 

@@ -27,7 +27,7 @@ puis, copie projet de Etape_1 dans un dossier nommé Etape_2.
 ```
 
 Import des librairies hibernate, pour utilisation des annotations hibernate.  
-![alt text](../imageReadme/Etape_2/image3.png)  
+![screenshot](../imageReadme/Etape_2/image3.png)  
 
 3. Configuration du datasource dans `application.properties` :
 
@@ -48,7 +48,7 @@ Création de la table user en respectant les consignes en utilisant Java Code ge
 2. Création une classe nommée `User` dans ce package.
 3. Créaion un nouveau modèle `UserDetails` avec les propriétés id, username et role.
 
-![alt text](imageReadme/Etape_2/image-1.png)
+![screenshot](imageReadme/Etape_2/image-1.png)
 
 ### Transformation de la Réponse en Format JSON dans le Contrôleur
 

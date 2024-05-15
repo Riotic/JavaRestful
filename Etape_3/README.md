@@ -69,7 +69,7 @@ Envoie une request POST avec `/register` endpoint avec username et password vide
 
 
 
-![alt text](imageReadme/Etape_3/register.png)
+![screenshot](imageReadme/Etape_3/register.png)
 
 Cela va creer un nouveau utilisateur dans la base de donnée.
 
@@ -77,7 +77,7 @@ Cela va creer un nouveau utilisateur dans la base de donnée.
 
 Envoie une request POST avec `/register` endpoint avec username et password dans request body :
 
-![alt text](imageReadme/Etape_3/register-409.png)
+![screenshot](imageReadme/Etape_3/register-409.png)
 
 
 ### Authenticate 
@@ -85,7 +85,7 @@ Envoie une request POST avec `/authenticate` endpoint avec le credentials d'user
 ```json
 POST /authenticate
 ```
-![alt text](imageReadme/Etape_3/authenticate.png)
+![screenshot](imageReadme/Etape_3/authenticate.png)
 
 Celui-ci va returner un JWT token si les credentials sont corrects.
 
@@ -97,13 +97,13 @@ Remplace `<JWT_TOKEN>` le JWT token qu'on obtient dans Etape 3.
 
 Puis on verifie la reponse si le token est valid et a les permissions nécessaire, nous devons recevoir une response de l'enpoint protegé : 
 
-![alt text](imageReadme/Etape_3/me.png)
+![screenshot](imageReadme/Etape_3/me.png)
 
 
 ### Invalid Tokens
 Si le token est invalide ou expiré, nous devons recevoir une erreur d'autorisation (401). Dans ce cas, nous devons peut-être réauthentifier l'utilisateur ou gérer l'erreur en conséquence :
 
 
-![alt text](imageReadme/Etape_3/me-401.png)
+![screenshot](imageReadme/Etape_3/me-401.png)
 
 En suivant ces étapes, nous pouvons tester le flux d'authentification et d'autorisation de l'application en utilisant Postman. Assurez-vous de remplacer les URL des points de terminaison et les charges utiles des requêtes par les valeurs appropriées pour l'application.
