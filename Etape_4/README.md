@@ -40,7 +40,7 @@ Dans cette étape, nous avons ajouté la nouvelles entities `Address` et mettons
 
 Une fois que les nouvelles entités, leurs requets et logique ont été implementé, nous avons crée une classe de tests unitaires appelée `ControllerTests` qui utilise MockMvc. nous avons implmenté tous les Test Unitaires demandé par le sujet en vérifiant les cas suivant :
 
-![screenshot](imageReadme/etape_4/TU.png)
+![screenshot](../imageReadme/etape_4/TU.png)
 
 Nous avons choisi d'utiliser les annotations suivantes pour nos tests unitaires :
 
@@ -74,7 +74,7 @@ Nous avons choisi d'utiliser les annotations suivantes pour nos tests unitaires 
 - **Endpoint de suppression d'adresse** :
   - `DELETE /address/{id}` : Endpoint pour supprimer une adresse. Seuls les utilisateurs ayant le rôle ROLE_ADMIN ou l'utilisateur propriétaire de l'adresse peuvent accéder à cette fonctionnalité.
 
-  ![screenshot](imageReadme/etape_4/delete_controller.png)
+  ![screenshot](../imageReadme/etape_4/delete_controller.png)
 
 ## Exécution du projet
 
@@ -89,26 +89,26 @@ Dans ce test nous avons crée une address pour une USER et USER_ADMIN pour teste
 -  Envoie une demande POST à l'endpoint `/address` avec le token JWT dans le header d'Authorization. L'utilisateur recois la reponse 201 et les data sur l'adresse crée :
 
 
-![screenshot](imageReadme/etape_4/user_create_address.png)
+![screenshot](../imageReadme/etape_4/user_create_address.png)
 
 - Envoie une demande GET à l'endpoint `/address/{id}` avec le token JWT dans le header d'Authorization. L'utilisateur avoir just l'access aux adresses qui lui appartient avec une reposne 200  :
 
-![screenshot](imageReadme/etape_4/user_get_address.png)
+![screenshot](../imageReadme/etape_4/user_get_address.png)
 
 
 - Envoie une demande DELETE à l'endpoint `/address/{id}` avec le token JWT dans le header d'Authorization. L'utilisateur n'est pas le propriétaire de l'adresse et nous avons fait une verificatoin que la réponse est une erreur 403 (Forbidden) :
 
-![screenshot](imageReadme/etape_4/user_delete_adm_403.png)
+![screenshot](../imageReadme/etape_4/user_delete_adm_403.png)
 
 
 **_Test avec un utilisateur ayant le rôle ROLE_ADMIN :_**
 
 - Envoie une demande GET à l'endpoint `/address/{id}` avec le token JWT dans le header d'Authorization de ADMIN. L'admin a l'access aux adresses de tous les utilisateurs y compris celui qui l'appartient avec une reposne 200  :
 
-![screenshot](imageReadme/etape_4/adm_get_address.png)
+![screenshot](../imageReadme/etape_4/adm_get_address.png)
 
 - Envoie une demande DELETE à l'endpoint `/address/{id}` de celui qui l'appartient pas. L'admin recoit la réponse est un succès (200) :
 
-![screenshot](imageReadme/etape_4/adm_delete_user.png)
+![screenshot](../imageReadme/etape_4/adm_delete_user.png)
 
 
